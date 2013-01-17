@@ -23,7 +23,7 @@ import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
-import org.bukkit.craftbukkit.CraftWorld;
+import org.bukkit.craftbukkit.v1_4_6.CraftWorld;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -111,51 +111,6 @@ public class AutoSave extends JavaPlugin implements Listener
         this.configmsg.loadmsg();
         this.config.loadbackupextfolderconfig();
         this.getServer().getPluginManager().registerEvents(this, this);
-        String vr = this.getServer().getVersion().toString();
-        char[] vrt = vr.toCharArray();
-        System.out.println(vr);
-        System.out.println(vrt);
-        int tmpp = 0;
-        String vrp = "v";
-
-        for (int world = 0; world < vr.length(); ++world)
-        {
-            if (vrt[world] == 58 && vrt[world - 1] == 67 && vrt[world - 2] == 77)
-            {
-                while (vrt[world] < 48 || vrt[world] > 57)
-                {
-                    ++world;
-                }
-
-                tmpp = world;
-            }
-        }
-
-        System.out.println(tmpp);
-
-        for (; vrt[tmpp] >= 48 && vrt[tmpp] <= 57 || vrt[tmpp] == 46; ++tmpp)
-        {
-            if (vrt[tmpp] == 46)
-            {
-                vrp = vrp + "_";
-            }
-            else
-            {
-                vrp = vrp + vrt[tmpp];
-            }
-        }
-
-        vrp.replaceAll("[.]", "_");
-        System.out.println(vrp);
-
-        try
-        {
-            ClassLoader.getSystemClassLoader().loadClass("org.bukkit.craftbukkit." + vrp + ".CraftWorld");
-        }
-        catch (ClassNotFoundException var9)
-        {
-            var9.printStackTrace();
-        }
 
         try
         {
