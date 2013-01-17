@@ -1,6 +1,6 @@
 name: AutoSaveWorld
 main: autosave.AutoSave
-version: 3.9
+version: 3.9.9-nobypass
 author: Shevchik(original plugin author:Cereal)
 description: >
              Provides automatic world saves at defined intervals.  The focus
