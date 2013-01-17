@@ -2,6 +2,8 @@ Unofficial repository of AutoSaveWorld Minecraft Bukkit plugin
 
 Based on http://dev.bukkit.org/server-mods/autosaveworld/
 
+Download: https://bitbucket.org/agaricusb/autoworldsave/downloads/AutoSaveWorld-3.9.9-nobypass.jar
+
 
 Licensed under GPLv3:
                     GNU GENERAL PUBLIC LICENSE
